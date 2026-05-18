@@ -303,24 +303,30 @@ nav{
 /* ═══════════════════
    SOCIAL TRUST STRIP
    ═══════════════════ */
-.reg-strip{
+.trust-strip{
   background:var(--white);
   border-bottom:1px solid var(--border);
   padding:22px 0;
 }
-.reg-strip.reveal{
+.trust-strip.reveal{
   transform:none;
   transition:opacity 0.15s linear;
 }
-.reg-strip:not(.in){opacity:0;}
-.reg-strip.in{opacity:1;}
-.reg-strip-inner{
+.trust-strip:not(.in){opacity:0;}
+.trust-strip.in{opacity:1;}
+.trust-strip-inner{
   display:flex;align-items:center;justify-content:center;
   gap:14px;flex-wrap:wrap;
 }
 .trusted-by-label{
   font-size:12px;font-weight:700;color:var(--text-light);
   letter-spacing:0.06em;text-transform:uppercase;
+  margin:0;
+}
+.company-logos{
+  display:flex;align-items:center;justify-content:center;
+  gap:14px;flex-wrap:wrap;
+  list-style:none;margin:0;padding:0;
 }
 .company-logo{
   display:inline-flex;align-items:center;justify-content:center;
@@ -892,7 +898,7 @@ footer{
   .testimonials-grid,.leadership-grid,.steps-grid{grid-template-columns:1fr;}
   .footer-grid{grid-template-columns:1fr 1fr;}
   .nav-links{display:none;}
-  .reg-strip-inner{justify-content:center;padding:0 24px;}
+  .trust-strip-inner{justify-content:center;padding:0 24px;}
   .company-logo{min-width:124px;}
   .law-grid{grid-template-columns:1fr;}
 }
@@ -1049,12 +1055,14 @@ footer{
 <!-- ──────────────────────────────────────────
      SOCIAL TRUST STRIP — company credibility logos
 ────────────────────────────────────────── -->
-<div class="reg-strip reveal">
+<div class="trust-strip reveal">
   <div class="container">
-    <div class="reg-strip-inner">
-      <span class="trusted-by-label">Trusted by</span>
-      <span class="company-logo">Alpha Holdings</span>
-      <span class="company-logo">Summit Group</span>
+    <div class="trust-strip-inner">
+      <h2 class="trusted-by-label">Trusted by</h2>
+      <ul class="company-logos" aria-label="Companies that trust CGSI">
+        <li class="company-logo">Alpha Holdings</li>
+        <li class="company-logo">Summit Group</li>
+      </ul>
     </div>
   </div>
 </div>
